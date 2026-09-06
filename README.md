@@ -1,5 +1,20 @@
 # PulseTwin
 
+## GitHub Pages deployment
+
+The live URL `https://saipallavi-09.github.io/pulsetwin/` currently shows this README because GitHub Pages is publishing the repository root, which contains documentation and uploaded ZIP files rather than a built website.
+
+This repository now includes `.github/workflows/deploy-pages.yml`. To deploy the frontend:
+
+1. Upload the **extracted repository contents**, not `frontend.zip` or `backend.zip`. The repository root must contain `frontend/`, `backend/`, and `.github/`.
+2. Push the contents to the `main` branch.
+3. Open **Settings → Pages** in GitHub and set **Source** to **GitHub Actions**.
+4. Push a new commit or run the **Deploy PulseTwin frontend to GitHub Pages** workflow from the Actions tab.
+5. After the workflow completes, open `https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/`.
+
+The frontend uses hash routing, so routes such as the Ward View work on GitHub Pages without server-side rewrite rules. GitHub Pages hosts only the static frontend; the FastAPI backend must be deployed separately if live API data is required. Without a backend URL, the Ward View still renders its synthetic preview and interactive floor-plan demo.
+
+
 Emergency-department digital twin: a React frontend and a FastAPI backend,
 in one repo.
 
